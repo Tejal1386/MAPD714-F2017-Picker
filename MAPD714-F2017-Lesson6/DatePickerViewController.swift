@@ -12,12 +12,13 @@ import UIKit
 
 class DatePickerViewController: UIViewController {
 
-    
+    //date picker
     @IBOutlet weak var datePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         let date = NSDate()
         datePicker.setDate(date as Date, animated: false)
        
@@ -25,6 +26,7 @@ class DatePickerViewController: UIViewController {
 
     @IBAction func onButtonPressed(_ sender: UIButton) {
         let date = datePicker.date
+        
         
         let message = "The date and time you selected is \(date)"
         let  alert = UIAlertController(title: "Date and Time selected",
